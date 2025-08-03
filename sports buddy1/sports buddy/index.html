@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏆 Sports Buddy</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>Sports Buddy</h1>
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="modeToggle">
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2>Find Your Perfect Match</h2>
+        <p>Discover events, meet sports buddies, and enjoy your favorite games—anytime, anywhere!</p>
+        <div class="cta-buttons">
+          <a href="user.html">Join as User</a>
+          <a href="admin.html">Login as Admin</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/sports-hero.png" alt="Sports Buddy Hero Image" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave SVG Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 320">
+      <path fill="#ffffff" fill-opacity="1"
+        d="M0,96L48,128C96,160,192,224,288,245.3C384,267,480,245,576,224C672,203,768,181,864,176C960,171,1056,181,1152,181.3C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>Why Sports Buddy?</h2>
+    <p>Sports Buddy is more than an app—it's your gateway to new friends, better fitness, and fun memories. Whether you're into cricket, football, badminton or yoga, we've got something for you.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Sports Buddy. All rights reserved.</p>
+  </footer>
+
+  <!-- Dark/Light Mode Script -->
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
+</body>
+</html>

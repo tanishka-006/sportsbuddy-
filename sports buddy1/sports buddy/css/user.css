@@ -1,0 +1,180 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffee58;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  animation: popIn 0.6s ease-in-out;
+}
+
+/* Container */
+.container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  animation: slideIn 0.8s ease-out;
+}
+
+/* Title */
+.container h1 {
+  font-size: 26px;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 20px;
+}
+
+/* Toggle buttons */
+.form-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  background: #ffee58;
+  border: none;
+  color: #0d47a1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-toggle button.active,
+.form-toggle button:hover {
+  background: #fdd835;
+  transform: scale(1.05);
+}
+
+/* Forms */
+.form {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.form:not(.hidden) {
+  display: flex;
+}
+
+label {
+  text-align: left;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #fff9c4;
+}
+
+input {
+  padding: 12px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #ffee58;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  background: #ffee58;
+  color: #0d47a1;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background: #fdd835;
+  transform: scale(1.05);
+}
+
+/* Message */
+.msg {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #ffccbc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  input, button[type="submit"] {
+    font-size: 14px;
+  }
+}

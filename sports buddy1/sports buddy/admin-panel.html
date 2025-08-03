@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sports Buddy Admin Panel for managing sports events and locations">
+  <title>🏆 Sports Buddy Admin Panel</title>
+  <link rel="stylesheet" href="css/admin-panel.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <div class="header-content">
+      <h1>Sports Buddy Admin Panel</h1>
+      <span id="adminEmailDisplay" style="color: #ffc107; font-weight: bold; margin-left: 20px;"></span> <!-- Added for admin email display -->
+      <button id="logoutBtn" class="logout-button" aria-label="Logout from admin panel">
+        <span class="button-text">Logout</span>
+        <span class="button-icon" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-forms">
+      <section class="form-section" aria-labelledby="category-heading">
+        <h2 id="category-heading">Add Category</h2>
+        <form id="categoryForm" class="admin-form">
+          <div class="form-group">
+            <label for="categoryInput" class="sr-only">Category Name</label>
+            <input type="text" id="categoryInput" class="form-input" placeholder="Category Name" required />
+          </div>
+          <button type="submit" class="form-button">Add Category</button>
+        </form>
+      </section>
+
+      <section class="form-section" aria-labelledby="city-heading">
+        <h2 id="city-heading">Add City</h2>
+        <form id="cityForm" class="admin-form">
+          <div class="form-group">
+            <label for="cityInput" class="sr-only">City Name</label>
+            <input type="text" id="cityInput" class="form-input" placeholder="City Name" required />
+          </div>
+          <button type="submit" class="form-button">Add City</button>
+        </form>
+      </section>
+
+      <section class="form-section" aria-labelledby="area-heading">
+        <h2 id="area-heading">Add Area</h2>
+        <form id="areaForm" class="admin-form">
+          <div class="form-group">
+            <label for="areaInput" class="sr-only">Area Name</label>
+            <input type="text" id="areaInput" class="form-input" placeholder="Area Name" required />
+          </div>
+          <button type="submit" class="form-button">Add Area</button>
+        </form>
+      </section>
+    </div>
+
+    <section class="events-section" aria-labelledby="events-heading">
+      <h2 id="events-heading">All Sports Events</h2>
+      <div class="events-container">
+        <ul id="sportsList" class="events-list">
+          <li class="loading-state">
+            <span class="loading-spinner" aria-hidden="true"></span>
+            <span>Loading events...</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

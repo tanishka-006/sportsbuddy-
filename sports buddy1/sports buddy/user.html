@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Login | Sports Buddy</title>
+  <link rel="stylesheet" href="css/user.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images/workout.jpeg" alt="Logo" class="logo" />
+    <h1>🏋️ Sports Buddy - User Access</h1>
+
+    <div class="form-toggle">
+      <button id="showLogin" class="active">Login</button>
+      <button id="showRegister">Register</button>
+    </div>
+
+    <!-- Feedback Message -->
+    <p id="userLoginMsg" class="msg"></p>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="form">
+      <h2>Login</h2>
+      <label for="loginEmail">Email</label>
+      <input type="email" id="loginEmail" placeholder="Enter your email" required />
+      
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required />
+      
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form hidden">
+      <h2>Register</h2>
+      <label for="registerEmail">Email</label>
+      <input type="email" id="registerEmail" placeholder="Enter your email" required />
+      
+      <label for="registerPassword">Password</label>
+      <input type="password" id="registerPassword" placeholder="Create a password (min 6 chars)" required />
+      
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script type="module" src="js/auth.js"></script>
+
+  <script>
+    // Toggle logic for showing login/register forms
+    const showLoginBtn = document.getElementById("showLogin");
+    const showRegisterBtn = document.getElementById("showRegister");
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    showLoginBtn.addEventListener("click", () => {
+      loginForm.classList.remove("hidden");
+      registerForm.classList.add("hidden");
+      showLoginBtn.classList.add("active");
+      showRegisterBtn.classList.remove("active");
+    });
+
+    showRegisterBtn.addEventListener("click", () => {
+      registerForm.classList.remove("hidden");
+      loginForm.classList.add("hidden");
+      showRegisterBtn.classList.add("active");
+      showLoginBtn.classList.remove("active");
+    });
+  </script>
+</body>
+</html>

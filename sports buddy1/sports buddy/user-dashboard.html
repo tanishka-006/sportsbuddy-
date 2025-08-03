@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎯 Sports Buddy - User Dashboard</title>
+  <link rel="stylesheet" href="css/user-dashboard.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Sports Buddy 🏅</h1>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <main>
+    <!-- Section to Create a New Event -->
+    <section class="form-section">
+      <h2>Create a Sports Event</h2>
+      <form id="eventForm">
+        <label for="sportName">Sport Name</label>
+        <input type="text" id="sportName" placeholder="e.g., Cricket, Football" required />
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Enter City" required />
+
+        <label for="area">Area</label>
+        <input type="text" id="area" placeholder="Enter Area" required />
+
+        <label for="time">Time</label>
+        <input type="datetime-local" id="time" required />
+
+        <button type="submit">➕ Add Event</button>
+      </form>
+      <p id="eventMsg" class="msg"></p>
+    </section>
+
+    <!-- Section to Display User Events -->
+    <section class="events-section">
+      <h2>Your Events</h2>
+      <ul id="userEventList">
+        <li class="placeholder">No events added yet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script type="module" src="js/user-dashboard.js"></script>
+</body>
+</html>
